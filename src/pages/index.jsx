@@ -1,32 +1,42 @@
 import { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 
-export default function Home() {
+const Home = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [birthDate, setBirthDate] = useState('');
   const [category, setCategory] = useState('');
+  const [timeRange, setTimeRange] = useState('');
 
-  const categories = ['Graphic Design', 'UI/UX Design', 'Front-End', 'Back-End', 'Full-Stack', 'MERN-Stack', 'Ingils dili', 'Rus dili', 'MS-Office']; // Kategorileri buraya ekleyebilirsin
+  const categories = ['Graphic Design', 'UI/UX Design', 'Front-End', 'Back-End', 'Full-Stack', 'MERN-Stack', 'Ingils dili', 'Rus dili', 'MS-Office']; // Courses
+  const timeRanges = ['Late Morning', 'Late Afternoon', 'Same']; // Times
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { data, error } = await supabase
       .from('users')
-      .insert([{ first_name: firstName, last_name: lastName, birth_date: birthDate, category }]);
+      .insert([{ first_name: firstName, last_name: lastName, birth_date: birthDate, category: category, time_range: timeRange }]);
 
     if (error) {
       console.error('Error inserting data:', error);
     } else {
       console.log('Data inserted successfully:', data);
-      // Formu temizlemek için alanları sıfırla
+
       setFirstName('');
       setLastName('');
       setBirthDate('');
       setCategory('');
+      setTimeRange('');
     }
   };
+
+
+  // if (error) {
+  //   console.error('Error inserting data:', error);
+  //   // Hata mesajını burada görebilirsiniz.
+  // }
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -66,6 +76,7 @@ export default function Home() {
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
+          {/*  Category */}
           <div>
             <label htmlFor="category" className="block text-sm font-medium text-gray-700">Category:</label>
             <select
@@ -81,6 +92,22 @@ export default function Home() {
               ))}
             </select>
           </div>
+          {/* Select Time Range */}
+          <div>
+            <label htmlFor="timeRange" className="block text-sm font-medium text-gray-700">Select Time Range:</label>
+            <select
+              id="timeRange"
+              value={timeRange}
+              onChange={(e) => setTimeRange(e.target.value)}
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option value="" disabled>Select Time Range</option>
+              {timeRanges.map((time) => (
+                <option key={time} value={time}>{time}</option>
+              ))}
+            </select>
+          </div>
           <button
             type="submit"
             className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -92,3 +119,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
