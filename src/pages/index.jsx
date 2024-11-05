@@ -54,7 +54,7 @@ const Home = () => {
         <div className="container">
           <ul className='grid grid-cols-1 text-center text-xl font-bold pb-5 pt-3'>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="aplications">Applications</Link></li>
+            <li><Link href="aplications">Aplications</Link></li>
           </ul>
         </div>
       </header>

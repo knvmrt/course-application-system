@@ -1,61 +1,8 @@
-// import Link from 'next/link'
-// import React from 'react'
-
-// const aplications = () => {
-//     return (
-//         <>
-//             <header className='flex bg-black text-white justify-center'>
-//                 <div className="container ">
-
-//                     <ul className='grid grid-cols-1 text-center text-xl font-bold'>
-//                         <li><Link href="/">Home</Link></li>
-//                         <li><Link href="aplications">Applications</Link></li>
-//                     </ul>
-
-//                 </div>
-//             </header>
-
-//             <section className='bg-gray-800 text-white flex justify-center pt-14'>
-
-//                 <table class="table-fixed">
-//                     <thead>
-//                         <tr>
-//                             <th className='bg-gray-500 border px-20'>First Name</th>
-//                             <th className='bg-gray-500 border px-20'>Last Name</th>
-//                             <th className='bg-gray-500 border px-20'>Birth Date</th>
-//                             <th className='bg-gray-500 border px-20'>Courses</th>
-//                             <th className='bg-gray-500 border px-20'>Select Time Range</th>
-//                             <th className='bg-gray-500 border px-20'>Aplication Date</th>
-//                         </tr>
-//                     </thead>
-//                     <tbody>
-//                         <tr>
-//                             <td>Murad</td>
-//                             <td>Gahramanov</td>
-//                             <td>05.10.2003</td>
-//                             <td>Full-Stack</td>
-//                             <td>Same</td>
-//                             <td>11.05.2024</td>
-//                         </tr>
-
-//                     </tbody>
-//                 </table>
-
-//             </section>
-
-//         </>
-//     )
-// }
-
-// export default aplications
-
-
-
 import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import Link from 'next/link';
 
-const Applications = () => {
+const Aplications = () => {
     const [applications, setApplications] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -84,7 +31,7 @@ const Applications = () => {
                 <div className="container">
                     <ul className='grid grid-cols-1 text-center text-xl font-bold pb-5 pt-3'>
                         <li><Link href="/">Home</Link></li>
-                        <li><Link href="aplications">Applications</Link></li>
+                        <li><Link href="aplications">Aplications</Link></li>
                     </ul>
                 </div>
             </header>
@@ -114,4 +61,4 @@ const Applications = () => {
     );
 };
 
-export default Applications;
+export default Aplications;
