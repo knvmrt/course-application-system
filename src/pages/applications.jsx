@@ -26,17 +26,17 @@ const Aplications = () => {
     }, []);
 
     return (
-        <>
+        <section className='bg-gray-800'>
             <header className='flex bg-black text-white justify-center'>
-                <div className="container">
-                    <ul className='grid grid-cols-1 text-center text-xl font-bold pb-5 pt-3'>
+                <div className="container flex justify-center">
+                    <ul className='text-center text-xl font-bold pb-5 pt-3 flex justify-start gap-10'>
                         <li><Link href="/">Home</Link></li>
-                        <li><Link href="aplications">Aplications</Link></li>
+                        <li><Link href="applications">Applications</Link></li>
                     </ul>
                 </div>
             </header>
 
-            <div className="min-h-screen flex items-center justify-center bg-gray-800 ">
+            <div className="min-h-screen flex items-center justify-center">
                 <div className="bg-gray-900 p-8 my-20 rounded-lg max-w-2xl w-full shadow-[0_30px_50px_-10px_#0106118c]">
                     <h1 className="text-3xl font-bold mb-6 text-center text-white">Applications List</h1>
 
@@ -57,7 +57,7 @@ const Aplications = () => {
                     )}
                 </div>
             </div>
-        </>
+        </section>
     );
 };
 
