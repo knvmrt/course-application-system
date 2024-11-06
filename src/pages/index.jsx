@@ -128,7 +128,7 @@ const Home = () => {
                 id="firstName"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none border-blue-700 border-2 focus:ring-indigo-800 sm:text-sm"
                 placeholder='First Name' />
               {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
             </div>
@@ -139,7 +139,7 @@ const Home = () => {
                 id="lastName"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none border-blue-700 border-2 focus:ring-indigo-500 sm:text-sm"
                 placeholder='Last Name' />
               {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
             </div>
@@ -150,7 +150,7 @@ const Home = () => {
                 id="birthDate"
                 value={birthDate}
                 onChange={(e) => setBirthDate(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 rounded-md shadow-sm focus:outline-none border-blue-700 border-2 focus:ring-indigo-500 sm:text-sm"
               />
               {errors.birthDate && <p className="text-red-500 text-sm mt-1">{errors.birthDate}</p>}
             </div>
@@ -160,7 +160,7 @@ const Home = () => {
                 id="category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 bg-white rounded-md shadow-sm focus:outline-none border-blue-700 border-2 focus:ring-indigo-500 sm:text-sm"
               >
                 <option value="" disabled>Select a course</option>
                 {categories.map((cat) => (
@@ -176,7 +176,7 @@ const Home = () => {
                 id="timeRange"
                 value={timeRange}
                 onChange={(e) => setTimeRange(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full px-3 py-2 bg-white rounded-md shadow-sm focus:outline-none border-blue-700 border-2 focus:ring-indigo-500 sm:text-sm"
               >
                 <option value="" disabled>Select Time Range</option>
                 {timeRanges.map((time) => (

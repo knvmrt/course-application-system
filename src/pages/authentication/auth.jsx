@@ -48,14 +48,14 @@ const AuthPage = () => {
                 <section className="grid grid-cols-1 px-16 py-12 bg-gray-900 shadow-[0_30px_50px_-10px_#0106118c] rounded-xl">
 
                     <h1 className="text-white font-black text-2xl flex justify-center mb-5">Verification</h1>
-                    <form className="flex items-center flex-col gap-10" onSubmit={handleSubmit}>
+                    <form className="flex items-center flex-col gap-6" onSubmit={handleSubmit}>
                         <div className="w-full">
                             <input
                                 type="text"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                placeholder="User:"
-                                className="w-full py-1 px-2 rounded-md"
+                                placeholder="User"
+                                className="w-full px-3 py-2 rounded-md shadow-sm focus:outline-none border-blue-700 border-2 focus:ring-indigo-800 sm:text-sm"
                             />
                             {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
                         </div>
@@ -64,8 +64,8 @@ const AuthPage = () => {
                                 type="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Password:"
-                                className="w-full py-1 px-2 rounded-md"
+                                placeholder="Password"
+                                className="w-full px-3 py-2 rounded-md shadow-sm focus:outline-none border-blue-700 border-2 focus:ring-indigo-800 sm:text-sm"
                             />
                             {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
                         </div>
