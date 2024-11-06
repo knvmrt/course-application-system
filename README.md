@@ -1,4 +1,39 @@
-# ✋Hello, this course registration is the system.
+# 🗂️Project information:
+### Project Name: Course application system 
+### Project Description: Course application system web app.
+
+### Project structure:
+```bash
+└── course-application-system
+    └── public
+        └── favicon.ico
+        └── next.svg
+        └── vercel.svg
+    └── src
+        └── lib
+            └── supabaseClient.js
+        └── pages
+            └── api
+                └── hello.js
+            └── authentication
+                └── applications.jsx
+                └── auth.jsx
+            └── _app.js
+            └── _document.js
+            └── index.jsx
+        └── styles
+            └── globals.css
+    └── .env.local
+    └── .eslintrc.json
+    └── .gitignore
+    └── jsconfig.json
+    └── next.config.mjs
+    └── package-lock.json
+    └── package.json
+    └── postcss.config.mjs
+    └── README.md
+    └── tailwind.config.js
+```
 
 ## 💻Project tech:
 
@@ -10,7 +45,6 @@
 ![SUPABASE](https://img.shields.io/badge/supabase-%233DCF8E.svg?style=for-the-badge&logo=supabase&logoColor=white)
 
 ## To mount Supabase, first create the `.env.local` file in the main directory.
-
 ### And the supabase API URL and ANON KEY should be added to the content of the file.
 
 ```env
@@ -45,10 +79,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-# 🚀 Project GitHub:
-
-```bash
-git remote add origin https://github.com/knvmrt/course-registration-system.git
-git push -u origin master
-```
