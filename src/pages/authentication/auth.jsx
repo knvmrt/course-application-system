@@ -18,7 +18,7 @@ const AuthPage = () => {
         if (!username) newErrors.username = "Username required!";
         if (!password) newErrors.password = "Password required!";
 
-        // Kullanıcı adı veya şifre yanlışsa hata mesajlarını belirleyin
+        // Define username, password and define error messages if incorrect.
         if (username && username !== "Admin") newErrors.username = "Invalid username!";
         if (password && password !== "admin123") newErrors.password = "Invalid password!";
 
