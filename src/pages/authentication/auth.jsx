@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const AuthPage = () => {
+const Authentication = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState({});
@@ -78,4 +78,4 @@ const AuthPage = () => {
     );
 }
 
-export default AuthPage;
+export default Authentication;
